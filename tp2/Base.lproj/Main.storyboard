@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q95-56-v12">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -57,11 +57,74 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pet-nA-AQq" secondAttribute="trailing" id="iYZ-ww-6Xp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="P2J-JH-QpR"/>
                     <connections>
                         <outlet property="table" destination="pet-nA-AQq" id="1qY-03-C0I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.43511450381675" y="-27.464788732394368"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="VbO-3y-jXF">
+            <objects>
+                <viewController storyboardIdentifier="Details" id="A4c-Rm-152" customClass="DetailsViewController" customModule="tp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q02-el-e5X">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JdC-Om-Doy">
+                                <rect key="frame" x="20" y="211" width="353" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="182" id="5Ic-dN-TOt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jt-3c-u1t">
+                                <rect key="frame" x="20" y="524" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cu3-Wh-xNs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fCI-SV-8nA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Jt-3c-u1t" firstAttribute="leading" secondItem="fCI-SV-8nA" secondAttribute="leading" constant="20" id="D74-ml-SbC"/>
+                            <constraint firstItem="fCI-SV-8nA" firstAttribute="trailing" secondItem="9Jt-3c-u1t" secondAttribute="trailing" constant="20" id="E1o-Rf-JGx"/>
+                            <constraint firstItem="9Jt-3c-u1t" firstAttribute="top" secondItem="JdC-Om-Doy" secondAttribute="bottom" constant="131" id="NhH-56-yuM"/>
+                            <constraint firstItem="JdC-Om-Doy" firstAttribute="top" secondItem="fCI-SV-8nA" secondAttribute="top" constant="152" id="YfV-H3-YOW"/>
+                            <constraint firstItem="JdC-Om-Doy" firstAttribute="leading" secondItem="fCI-SV-8nA" secondAttribute="leading" constant="20" id="ZXj-vE-Vse"/>
+                            <constraint firstItem="fCI-SV-8nA" firstAttribute="trailing" secondItem="JdC-Om-Doy" secondAttribute="trailing" constant="20" id="uLP-sF-3KK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="JdC-Om-Doy" id="cxK-Bd-dfj"/>
+                        <outlet property="lab" destination="9Jt-3c-u1t" id="aJx-Ck-Eqs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w6m-FY-Z30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852.6717557251907" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hll-Xd-yaY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q95-56-v12" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BGc-LY-FCy">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X6C-Al-VGc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hnb-Vu-wxg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="26.717557251908396" y="-27.464788732394368"/>
         </scene>
